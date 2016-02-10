@@ -48,7 +48,7 @@ var isObject = require('is-real-object')
  * @return {Boolean}
  * @api public
  */
-module.exports = function isBackslash (val, opts) {
+module.exports = function isBackslash (val, opts) { /*eslint complexity:0 */
   opts = isObject(opts) ? opts : {strict: false}
   if (opts.strict === true) {
     return typeof val === 'string' && val.length === 1 && val.charCodeAt(0) === 92
